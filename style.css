@@ -1,0 +1,297 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    font-family: 'Poppins', sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06141b,
+            #0b2b33,
+            #113946
+        );
+}
+
+/* Main Container */
+.container{
+    width: 100%;
+    max-width: 550px;
+
+    background: rgba(10, 25, 35, 0.85);
+
+    border: 1px solid rgba(0, 255, 200, 0.15);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 0 25px rgba(0, 255, 200, 0.12),
+        0 8px 40px rgba(0,0,0,0.4);
+
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.container:hover{
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 35px rgba(0, 255, 200, 0.2),
+        0 12px 50px rgba(0,0,0,0.5);
+}
+
+/* Heading */
+h2{
+    text-align: center;
+
+    margin-bottom: 28px;
+
+    color: #00ffd5;
+
+    font-size: 34px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 12px rgba(0,255,213,0.5);
+}
+
+/* Form */
+.form-container{
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+/* Input Field */
+input[type="text"]{
+    flex: 1;
+
+    padding: 14px 18px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(0,255,213,0.2);
+
+    outline: none;
+
+    font-size: 16px;
+
+    background: rgba(255,255,255,0.05);
+
+    color: #ffffff;
+
+    transition: 0.3s ease;
+}
+
+/* Placeholder */
+input[type="text"]::placeholder{
+    color: #9cc7c7;
+}
+
+/* Focus Effect */
+input[type="text"]:focus{
+    border-color: #00ffd5;
+
+    box-shadow:
+        0 0 12px rgba(0,255,213,0.35);
+
+    background: rgba(255,255,255,0.08);
+}
+
+/* Buttons */
+button{
+    border: none;
+    outline: none;
+
+    padding: 13px 18px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+/* Add Button */
+.add-btn{
+    background:
+        linear-gradient(
+            135deg,
+            #00c9a7,
+            #00e5c3
+        );
+
+    color: #062c30;
+
+    font-weight: 600;
+}
+
+.add-btn:hover{
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 15px rgba(0,229,195,0.5);
+}
+
+/* Update Button */
+.update-btn{
+    background:
+        linear-gradient(
+            135deg,
+            #00b4d8,
+            #48cae4
+        );
+
+    color: #041c24;
+
+    font-weight: 600;
+}
+
+.update-btn:hover{
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 15px rgba(72,202,228,0.5);
+}
+
+/* Item List */
+ul.item-list{
+    list-style: none;
+}
+
+/* List Item */
+ul.item-list li{
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(0,255,213,0.08);
+
+    margin-bottom: 15px;
+
+    padding: 16px;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #ffffff;
+
+    transition: 0.3s ease;
+}
+
+/* Hover */
+ul.item-list li:hover{
+    transform: translateX(6px);
+
+    background: rgba(0,255,213,0.08);
+
+    border-color: rgba(0,255,213,0.25);
+}
+
+/* Button Group */
+ul.item-list li div{
+    display: flex;
+    gap: 10px;
+}
+
+/* Edit Button */
+ul.item-list li button:first-child{
+    background:
+        linear-gradient(
+            135deg,
+            #14b8a6,
+            #2dd4bf
+        );
+
+    color: #032b2f;
+}
+
+/* Edit Hover */
+ul.item-list li button:first-child:hover{
+    box-shadow:
+        0 0 12px rgba(45,212,191,0.5);
+
+    transform: scale(1.05);
+}
+
+/* Delete Button */
+ul.item-list li button:last-child{
+    background:
+        linear-gradient(
+            135deg,
+            #ff4d6d,
+            #ff758f
+        );
+
+    color: white;
+}
+
+/* Delete Hover */
+ul.item-list li button:last-child:hover{
+    box-shadow:
+        0 0 12px rgba(255,117,143,0.45);
+
+    transform: scale(1.05);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #00ffd5;
+    border-radius: 20px;
+}
+
+/* Responsive */
+@media(max-width: 600px){
+
+    .form-container{
+        flex-direction: column;
+    }
+
+    button{
+        width: 100%;
+    }
+
+    ul.item-list li{
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 14px;
+    }
+
+    ul.item-list li div{
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
