@@ -1,8 +1,8 @@
 // Array to hold the list of items
-let items = []; 
+let items = [];
 // Ye ek empty array hai jisme sari items store hongi.
 
-let updateIndex = null; 
+let updateIndex = null;
 // Ye variable store karta hai ki kaunsi item edit ho rahi hai.
 
 
@@ -41,7 +41,7 @@ function displayItems() {
     // Taaki duplicate items na bane
     itemList.innerHTML = "";
 
-    
+
     // Array ki har item par loop chal raha hai
     items.forEach((item, index) => {
 
